@@ -1,0 +1,38 @@
+﻿//Saifullin Bulat 220P GeometricFigures Task4 04.06.22
+using System.Drawing;
+
+class Triangle : FilledFigure
+{
+    public MyPoint A
+    {
+        get { return basePoint; }
+        set { basePoint = value; }
+    }
+    public MyPoint B;
+    public MyPoint C;
+
+    public Triangle(MyPoint a, MyPoint b, MyPoint c) : base(a)
+    {
+        B = b;
+        C = c;
+    }
+
+    public Triangle(int x1, int y1, int x2, int y2, int x3, int y3) 
+        : base(x1, y1)
+    {
+        B = new MyPoint(x2, y2);
+        C = new MyPoint(x3, y3);
+    }
+
+    public override void Draw(Graphics g)
+    {
+        g.DrawLine(new Pen(Stroke.Color, Stroke.Width), A.X, A.Y, B.X, B.Y);
+        g.DrawLine(new Pen(Stroke.Color, Stroke.Width), B.X, B.Y, C.X, C.Y);
+        g.DrawLine(new Pen(Stroke.Color, Stroke.Width), C.X, C.Y, A.X, A.Y);
+    }
+
+    public override string ToString()
+    {
+        return $"Triangle;{Stroke.Color.ToArgb()};{Stroke.Width};{A};{B};{C};";
+    }
+}
