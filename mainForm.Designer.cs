@@ -35,11 +35,11 @@ namespace GeometricFigures3
             this.Triangle = new System.Windows.Forms.ToolStripButton();
             this.Circle = new System.Windows.Forms.ToolStripButton();
             this.Line = new System.Windows.Forms.ToolStripButton();
-            this.Clear = new System.Windows.Forms.ToolStripButton();
+            this.tsBClear = new System.Windows.Forms.ToolStripButton();
             this.mSMenu = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.sFDSave = new System.Windows.Forms.SaveFileDialog();
             this.oFDOpen = new System.Windows.Forms.OpenFileDialog();
             this.pPol1 = new System.Windows.Forms.Panel();
@@ -56,7 +56,7 @@ namespace GeometricFigures3
             this.Triangle,
             this.Circle,
             this.Line,
-            this.Clear});
+            this.tsBClear});
             this.tSFigures.Location = new System.Drawing.Point(0, 29);
             this.tSFigures.Name = "tSFigures";
             this.tSFigures.Size = new System.Drawing.Size(83, 368);
@@ -110,51 +110,51 @@ namespace GeometricFigures3
             this.Line.Text = "Line";
             this.Line.Click += new System.EventHandler(this.Line_Click);
             // 
-            // Clear
+            // tsBClear
             // 
-            this.Clear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Clear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Clear.Image = ((System.Drawing.Image)(resources.GetObject("Clear.Image")));
-            this.Clear.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(80, 20);
-            this.Clear.Text = "Clear";
-            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            this.tsBClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsBClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tsBClear.Image = ((System.Drawing.Image)(resources.GetObject("tsBClear.Image")));
+            this.tsBClear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBClear.Name = "tsBClear";
+            this.tsBClear.Size = new System.Drawing.Size(80, 20);
+            this.tsBClear.Text = "Clear";
+            this.tsBClear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // mSMenu
             // 
             this.mSMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.mSMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.tsMFile});
             this.mSMenu.Location = new System.Drawing.Point(0, 0);
             this.mSMenu.Name = "mSMenu";
             this.mSMenu.Size = new System.Drawing.Size(800, 29);
             this.mSMenu.TabIndex = 3;
             this.mSMenu.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // tsMFile
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveToolStripMenuItem,
-            this.loadToolStripMenuItem});
-            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 25);
-            this.fileToolStripMenuItem.Text = "File";
+            this.tsMFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsMSave,
+            this.tsMLoad});
+            this.tsMFile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tsMFile.Name = "tsMFile";
+            this.tsMFile.Size = new System.Drawing.Size(46, 25);
+            this.tsMFile.Text = "File";
             // 
-            // saveToolStripMenuItem
+            // tsMSave
             // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            this.tsMSave.Name = "tsMSave";
+            this.tsMSave.Size = new System.Drawing.Size(180, 26);
+            this.tsMSave.Text = "Save";
+            this.tsMSave.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
-            // loadToolStripMenuItem
+            // tsMLoad
             // 
-            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
-            this.loadToolStripMenuItem.Text = "Load";
-            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
+            this.tsMLoad.Name = "tsMLoad";
+            this.tsMLoad.Size = new System.Drawing.Size(180, 26);
+            this.tsMLoad.Text = "Load";
+            this.tsMLoad.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // oFDOpen
             // 
@@ -200,11 +200,11 @@ namespace GeometricFigures3
         internal System.Windows.Forms.ToolStripButton Triangle;
         private System.Windows.Forms.ToolStripButton Circle;
         private System.Windows.Forms.ToolStripButton Line;
-        private System.Windows.Forms.ToolStripButton Clear;
+        private System.Windows.Forms.ToolStripButton tsBClear;
         private System.Windows.Forms.MenuStrip mSMenu;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsMFile;
+        private System.Windows.Forms.ToolStripMenuItem tsMSave;
+        private System.Windows.Forms.ToolStripMenuItem tsMLoad;
         private System.Windows.Forms.SaveFileDialog sFDSave;
         private System.Windows.Forms.OpenFileDialog oFDOpen;
         internal System.Windows.Forms.Panel pPol1;
